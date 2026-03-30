@@ -1,0 +1,36 @@
+{
+  "app": {
+    "db_path": "airline_price_agent/price_observations.sqlite3",
+    "check_every_minutes": 360
+  },
+  "provider": {
+    "name": "mock"
+  },
+  "alert": {
+    "below_avg_percent": 10,
+    "lookback_days": 30,
+    "min_samples": 10
+  },
+  "email": {
+    "enabled": false,
+    "smtp_host": "smtp.gmail.com",
+    "smtp_port": 587,
+    "smtp_username": "your-email@gmail.com",
+    "smtp_password": "app-password",
+    "from_address": "your-email@gmail.com"
+  },
+  "routes": [
+    {
+      "origin": "SFO",
+      "destination": "JFK",
+      "departure_date": "2026-07-14",
+      "recipient_email": "alerts@example.com"
+    },
+    {
+      "origin": "LAX",
+      "destination": "BOS",
+      "departure_date": "2026-08-02",
+      "recipient_email": "alerts@example.com"
+    }
+  ]
+}
